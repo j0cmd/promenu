@@ -1,0 +1,30 @@
+1. list.append(x)
+
+O método append adiciona um item ao final da lista. É o equivalente a a[len(a):] = [x]. Esse método só adiciona um elemento por vez, para adicionar mais de um elemento precisamos utilizar um loop.
+
+cubos.append(216)  # adiciona o cubo de 6 
+cubos.append(7 ** 3)  # adiciona o cubo de 7
+>>> cubos
+[1, 8, 27, 64, 125, 216, 343]# lista de animais
+animais = ['gato', 'cão', 'cavalo']
+
+# porco é adicionao ao final da lista
+animais.append('porco')
+
+# lista atualizada
+print('Lista atualizada: ', animais)
+>>> ['gato', 'cão', 'cavalo', 'porco']
+
+Também é possível adicionar uma lista a outra lista,
+
+# Lista de animais
+animais = ['gato', 'cão', 'cavalos']
+
+# Lista de animais selvagens
+selvagens = ['tigre', 'raposa']
+
+# adicionando a lista de animais selvagens na lista padrão.
+animals.append(selvagens)
+
+print('Lista atualizadas: ', animais)
+>>>['gato', 'cão', 'cavalos',['tigre', 'raposa']]

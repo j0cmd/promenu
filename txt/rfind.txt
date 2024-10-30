@@ -1,0 +1,30 @@
+rfind
+
+Em Python, o método rfind() é usado para encontrar a última ocorrência de uma substring. Ele funciona de maneira semelhante ao método find(), mas começa a busca do final da string em direção ao início. Se a substring for encontrada, o método retorna a posição da última ocorrência. Caso contrário, ele retorna -1.
+
+Sintaxe:
+
+string.rfind(substring)
+
+string.rfind(substring, início)
+
+string.rfind(substring, início, fim)
+
+Exemplo:
+
+texto = "Python é uma linguagem de programação Python."
+
+# Encontrar a última ocorrência de "Python"
+posicao = texto.rfind("Python")
+print("Posição da última ocorrência de 'Python':", posicao)
+# Posição da última ocorrência de 'Python': 38
+
+# Começar a busca a partir da posição 20
+posicao = texto.rfind("Python", 20)
+print("Posição da última ocorrência de 'Python' a partir da posição 20:", posicao)
+# Posição da última ocorrência de 'Python' a partir da posição 20: 38
+
+# Limitar a busca até a posição 25
+posicao = texto.rfind("Python", 0, 25)
+print("Posição da última ocorrência de 'Python' até a posição 25:", posicao)
+# Posição da última ocorrência de 'Python' até a posição 25: 0

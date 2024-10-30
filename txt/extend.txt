@@ -1,0 +1,28 @@
+2. list.extend(iterable)
+
+O método extend também serve para adicionar mais elementos a uma lista. Seria o equivalente a a[len(a):] = iterable . Vejam o exemplo anterior se tivéssemos utilizado o método extend:
+
+# Lista de animais
+animais = ['gato', 'cão', 'cavalos']
+
+# Lista de animais selvagens
+selvagens = ['tigre', 'raposa']
+
+# adicionando a lista de animais selvagens na lista padrão.
+animais.extend(selvagens)
+
+print(animais)
+>>>['gato', 'cão', 'cavalos', 'tigre', 'raposa']
+
+Aqui há um detalhe. Caso você adicione uma string "solta", o método irá trabalhar como se a string fosse uma lista de caracteres. Vejam:
+
+# variável texto com o animail macaco armazenado
+texto = 'macaco'
+# Lista de animais
+animais = ['gato', 'cão', 'cavalos']
+
+# adicionando a palavra macaco a lista animais
+animais.extend(texto)
+
+print(animais)
+>>>['gato', 'cão', 'cavalos', 'm', 'a', 'c', 'a', 'c', 'o']

@@ -1,0 +1,31 @@
+index
+
+O método index() funciona como o método find(), mas há uma única diferença entre esses métodos. Ambos os métodos retornam a posição do texto de busca se a string existir na string principal. Se o texto de busca não existir na string principal, o método find() retorna -1, mas o método index() gera um ValueError.
+
+Sintaxe:
+
+<string>.index(texto_de_busca [, início [, fim]])
+
+Este método possui três argumentos. O primeiro argumento é obrigatório e contém o texto de busca. Os outros dois argumentos são opcionais e contêm a posição de início e fim da busca.
+
+Exemplo:
+
+O método index() é usado quatro vezes no seguinte script. Um bloco try-except é usado aqui para lidar com o ValueError. O método index() é usado com um argumento na primeira saída, que buscará a palavra ‘powerful’ na variável strVal. Em seguida, o método index() buscará a palavra ‘program’ a partir da posição 10 que existe em strVal. Em seguida, o método buscará a palavra ‘is’ na posição 5 a 15. O último método index() buscará a palavra ‘his’ em 025, que não existe em strVal.
+
+strVal = 'Python é uma linguagem de programação poderosa.'
+
+try:
+    print(strVal.index('poderosa'))
+		# 38
+
+    print(strVal.index('programação', 10))
+		# 26
+
+    print(strVal.index('é', 5, 15))
+		# 7
+
+    print(strVal.index('uma', 0, 25))
+		# A string de busca não foi encontrada
+
+except ValueError:
+    print("A string de busca não foi encontrada")

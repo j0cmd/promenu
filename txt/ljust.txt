@@ -1,0 +1,13 @@
+ljust
+
+Retorna a string justificada à esquerda em uma string de comprimento especificado. O preenchimento é feito usando o caractere especificado (o padrão é um espaço).
+
+Sintaxe:
+
+<string>.ljust(width [, char])
+
+Exemplo:
+
+s = 'Python é incrível!'
+s = s.ljust(30, '-')
+# Python é incrível!------------

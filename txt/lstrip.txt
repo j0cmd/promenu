@@ -1,0 +1,14 @@
+lstrip
+
+O método lstrip() remove o espaço em branco do lado esquerdo.
+
+Sintaxe:
+
+<string>.lstrip()
+
+Exemplo:
+
+texto = "    Texto com espaço em branco no início e no fim.   "
+
+texto.lstrip()
+# "Texto com espaço em branco no início e no fim.   "

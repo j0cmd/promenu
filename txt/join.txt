@@ -1,0 +1,20 @@
+join
+
+O método join() é usado para criar uma nova string combinando outras strings com uma string, lista de strings ou tupla de strings.
+
+Sintaxe:
+
+separador.join(iterável)
+
+Ele possui apenas um argumento que pode ser uma string, uma lista ou uma tupla, e o separador contém o valor da string que será usado para a concatenação.
+
+Exemplo:
+
+O método strip() é usado para remover espaços em branco de ambos os lados de uma string.
+
+nomes = ["Alice", "Bob", "Charlie", "David"]
+
+nomes_formatados = ", ".join(nomes)
+
+print("Lista de nomes formatada:", nomes_formatados)
+# Lista de nomes formatada: Alice, Bob, Charlie, David

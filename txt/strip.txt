@@ -1,0 +1,16 @@
+strip
+
+O método strip() é usado para remover espaços em branco de ambos os lados de uma string. Este método não aceita nenhum argumento.
+
+Sintaxe:
+
+<string>.strip()
+
+<string>.rStrip()
+
+Exemplo:
+
+texto = "    Texto com espaço em branco no início e no fim.   "
+
+texto.strip()
+# "Texto com espaço em branco no início e no fim."

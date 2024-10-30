@@ -1,0 +1,32 @@
+replace
+
+O método replace() é usado para substituir uma parte específica de uma cadeia de caracteres por outra cadeia, se a correspondência for encontrada. Ele pode receber três argumentos, sendo dois obrigatórios e um opcional.
+
+Sintaxe:
+
+<string>.replace(string_de_busca, string_de_substituição [,limite])
+
+O primeiro argumento é a string de busca que você deseja substituir, e o segundo argumento é a string de substituição. O terceiro argumento opcional define o limite para a substituição da string.
+
+Exemplo:
+
+No script a seguir, o primeiro replace é usado para substituir a palavra ‘PHP’ pela palavra ‘Java’ no conteúdo da variável str. Como a palavra de busca existe na variável str, a palavra ‘PHP’ será substituída pela palavra ‘Java’. O terceiro argumento do método replace é usado no próximo replace e ele substituirá apenas a primeira correspondência da palavra de busca.
+
+
+texto = "Eu gosto de PHP, mas eu gosto mais de Python"
+
+substituicao = texto.replace("PHP", "Java")
+
+print("String original:", texto)
+# String original: Eu gosto de PHP, mas eu gosto mais de Python
+
+print("String substituída:", substituicao)
+# String substituída: Eu gosto de Java, mas eu gosto mais de Python
+
+substituicao_2 = texto.replace("gosto", "não gosto", 1)
+
+print("\nString original:", texto)
+# String original: Eu gosto de PHP, mas eu gosto mais de Python
+
+print("String substituída:", substituicao_2)
+# String substituída: Eu não gosto de PHP, mas eu gosto mais de Python

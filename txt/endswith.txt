@@ -1,0 +1,15 @@
+endswith
+
+Verifica se uma determinada string termina com um sufixo específico ou não, e retorna verdadeiro ou falso.
+
+Sintaxe:
+
+<string>.endswith(substring)
+
+Exemplo:
+
+texto = "constitucionalissimamente"
+texto.endswith("Mente")
+# False
+texto.endswith("mente")
+# True

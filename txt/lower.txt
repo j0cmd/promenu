@@ -1,0 +1,14 @@
+lower
+
+Retorna uma nova string com todos os caracteres minúsculos.
+
+Sintaxe:
+
+<string>.lower()
+
+Exemplo:
+
+texto = "TEXTO PARA DEIXAR EM minúsculas"
+
+print(texto.lower())
+# texto para deixar em minúsculas

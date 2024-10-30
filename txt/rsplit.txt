@@ -1,0 +1,19 @@
+rsplit
+
+Assim como o método split, o rsplit é usado para dividir qualquer dado de string com base em um separador ou delimitador específico. Ele também pode receber dois argumentos, e ambos são opcionais.
+
+Sintaxe:
+
+<string>.rsplit()
+
+<string>.rsplit(separador)
+
+<string>.rsplit(separador, maxsplit=maxsplit)
+
+Exemplo:
+
+s = 'string methods in python'.rsplit()
+# ['string', 'methods', 'in', 'python']
+
+s = 'string methods in python'.rsplit(' ', maxsplit=1)
+# ['string methods in', 'python']

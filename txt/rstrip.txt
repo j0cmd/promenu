@@ -1,0 +1,14 @@
+rstrip
+
+O método rstrip() remove o espaço em branco do lado direito da string.
+
+Sintaxe:
+
+<string>.rstrip()
+
+Exemplo:
+
+texto = "    Texto com espaço em branco no início e no fim.   "
+
+texto.rstrip()
+# "    Texto com espaço em branco no início e no fim."

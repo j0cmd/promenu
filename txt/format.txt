@@ -1,0 +1,26 @@
+format
+
+O método format() é um método essencial em Python para gerar saída formatada. Ele tem muitos usos e pode ser aplicado tanto a dados de tipo string quanto numéricos para gerar uma saída formatada. Como este método pode ser usado para formatação baseada em índice de dados de tipo string é mostrado no exemplo a seguir.
+
+Sintaxe:
+
+{}.format(valor)
+
+A string e a posição do marcador são definidas dentro das chaves ({}). Ele retorna a string formatada com base na string e nos valores passados na posição do marcador.
+
+Exemplo:
+
+Os quatro tipos de formatação são mostrados no script a seguir. No primeiro resultado, o valor do índice {0} é usado. Nenhuma posição é atribuída no segundo resultado. Duas posições sequenciais são atribuídas no terceiro resultado. Três posições não ordenadas são definidas no quarto resultado.
+
+# Exemplo 1: Substituição direta com índice
+print("Aprenda a programar em {0}.".format("Python"))
+# Aprenda a programar em Python.
+
+# Exemplo 2: Substituição sem especificar índices
+print("\nTanto {} quanto {} são linguagens de script".format("Bash", "Python"))
+# Tanto Bash quanto Python são linguagens de script
+
+# Exemplo 3: Substituição com índices
+print("\nID do estudante: {0}\nNome do estudante: {1}\n".format("00001", "João Ninguém"))
+# ID do estudante: 00001
+# Nome do estudante: João Ninguém

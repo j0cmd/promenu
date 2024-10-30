@@ -1,0 +1,15 @@
+startswith
+
+Verifica se uma determinada string começa com um prefixo específico ou não, e retorna verdadeiro ou falso.
+
+Sintaxe:
+
+<string>.startswith(substring)
+
+Exemplo:
+
+texto = "Sobremesa"
+texto.startswith("Sobre")
+# True
+texto.startswith("sobre")
+# False

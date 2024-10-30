@@ -1,0 +1,19 @@
+partition
+
+Em Python, o método de string partition() procura por uma substring específica dentro de uma string e divide a string original em uma tupla contendo três elementos.
+
+    O primeiro elemento contém uma parte da string antes da substring especificada.
+    O segundo elemento contém a substring especificada.
+    O terceiro elemento contém a parte restante após a substring.
+
+Sintaxe:
+
+<string>.partition(substring)
+
+Exemplo:
+
+frase = "O gato persegue o rato no jardim."
+substring = "rato"
+resultado = frase.partition(substring)
+print(resultado)
+# ["O gato persegue o ", "rato", " no jardim."]

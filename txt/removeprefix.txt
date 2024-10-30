@@ -1,0 +1,15 @@
+removeprefix
+
+O método removeprefix em Python é usado para remover um prefixo especificado de uma string. Se a string começa com o prefixo, o prefixo é removido; caso contrário, a string original é mantida inalterada.
+
+Sintaxe:
+
+<string>.removeprefix(substring)
+
+Exemplo:
+
+texto = "Python é ótimo"
+resultado = texto.removeprefix("Python é ")
+print(resultado)  
+# "ótimo"
+

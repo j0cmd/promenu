@@ -1,0 +1,26 @@
+Resumo
+Método	Uso
+len_________Conta o número total de caracteres em uma string.
+capitalize__Converte o primeiro caractere em maiúsculo e os demais em minúsculos.
+upper_______Retorna uma nova string com todos os caracteres em maiúsculo.
+lower_______Retorna uma nova string com todos os caracteres em minúsculo.
+count_______Conta quantas vezes uma string específica aparece na string.
+find________Retorna a posição da primeira ocorrência de uma substring.
+rfind_______Retorna a posição da última ocorrência de uma substring.
+startswith__Verifica se a string começa com um prefixo específico.
+endswith____Verifica se a string termina com um sufixo específico.
+index_______Funciona como o método find(), mas gera um ValueError se não encontrar.
+split_______Divide a string com base em um separador ou delimitador específico.
+rsplit______Divide a string com base em um separador ou delimitador específico, começando do final.
+join________Cria uma nova string combinando outras strings com um separador.
+strip_______Remove espaços em branco de ambos os lados da string.
+lstrip______Remove espaços em branco do lado esquerdo da string.
+rstrip______Remove espaços em branco do lado direito da string.
+removeprefix Remove um prefixo específico de uma string.
+removesuffix Remove um sufixo específico de uma string.
+replace_____Substitui uma parte específica de uma string por outra, se a correspondência for encontrada.
+format______Gera saída formatada com base em índice de dados de tipo string.
+center______Retorna uma string centralizada em um comprimento especificado.
+ljust_______Retorna a string justificada à esquerda em um comprimento especificado.
+rjust_______Retorna a string justificada à direita em um comprimento especificado.
+partition___Divide a string em uma tupla contendo três elementos com base em uma substring específica.

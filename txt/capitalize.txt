@@ -1,0 +1,14 @@
+capitalize
+
+O método capitalize() retorna uma nova string modificada, convertendo o primeiro caractere da string original em maiúsculo e os demais em minúsculos.
+
+Sintaxe:
+
+<string>.capitalize()
+
+Exemplo:
+
+texto = "tExtO a Ser alTeRado"
+
+print(texto.capitalize())
+# Texto a ser alterado

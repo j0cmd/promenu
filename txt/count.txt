@@ -1,0 +1,29 @@
+count
+
+O método count() é usado para contar quantas vezes uma determinada string aparece em um texto.
+
+Sintaxe:
+
+string.count(texto_de_busca)
+
+string.count(texto_de_busca, início)
+
+string.count(texto_de_busca, início, fim)
+
+Este método possui três argumentos. O primeiro argumento é obrigatório, e os outros dois argumentos são opcionais. O primeiro argumento contém o valor que precisa ser procurado no texto. O segundo argumento contém a posição de início da busca, e o terceiro argumento contém a posição de fim da busca.
+
+Exemplo:
+
+O seguinte script mostra os três usos diferentes do método count(). O primeiro método irá procurar a palavra ‘é’ na variável strVal. O segundo método procura a mesma palavra a partir da posição 20. O terceiro método procura a mesma palavra dentro do intervalo da posição 50 a 100.
+
+
+strVal = 'Python é uma linguagem de programação poderosa. É muito simples de usar. É uma excelente linguagem para iniciantes aprenderem programação.'
+
+print("A palavra 'é' apareceu %d vezes" %(strVal.count("é")))
+# A palavra 'é' apareceu 1 vezes
+
+print("A palavra 'é' apareceu %d vezes após a posição 20" %(strVal.count("é", 20)))
+# A palavra 'é' apareceu 0 vezes após a posição 20
+
+print("A palavra 'é' apareceu %d vezes dentro do intervalo de 50 a 100" %(strVal.count("é", 50, 100)))
+# A palavra 'é' apareceu 0 vezes dentro do intervalo de 50 a 100

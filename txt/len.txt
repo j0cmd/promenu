@@ -1,0 +1,14 @@
+len
+
+Usado para contar o número total de caracteres em uma string.
+
+Sintaxe:
+
+len(<string>)
+
+Exemplo:
+
+texto = "Quantos caracteres tem aqui?"
+
+print(len(texto))
+# 28

@@ -1,0 +1,14 @@
+removesuffix
+
+O método removesuffix em Python é utilizado para remover um sufixo específico de uma string. Se a string terminar com o sufixo, esse sufixo é removido; caso contrário, a string original permanecerá inalterada.
+
+Sintaxe:
+
+<string>.removesufix(substring)
+
+Exemplo:
+
+texto = "O inverno está chegando."
+resultado = texto.removesuffix(" está chegando.")
+print(resultado)  
+# "O inverno"

@@ -1,0 +1,31 @@
+ find
+
+Retorna a posição/índice da primeira ocorrência de uma substring em uma determinada string. Caso contrário, ele retorna -1.
+
+Sintaxe:
+
+find(texto_de_busca)
+
+find(texto_de_busca, posição_inicial)
+
+find(texto_de_busca, posição_inicial, posição_final)
+
+Este método pode receber três argumentos, onde o primeiro argumento é obrigatório e os outros dois argumentos são opcionais. O primeiro argumento contém o valor da string que será procurada, o segundo argumento define a posição de início da busca e o terceiro argumento define a posição de fim da busca. Ele retorna a posição do texto_de_busca se ele existir na string principal, caso contrário, retorna -1.
+
+Exemplo:
+
+Os usos do método find() com um argumento, dois argumentos e três argumentos são mostrados no seguinte script. A primeira saída será -1 porque o texto de busca é ‘python’ e a variável, str, contém a string ‘Python’. A segunda saída retornará uma posição válida porque a palavra ‘program’ existe após a posição 10. A terceira saída retornará uma posição válida porque a palavra ‘earn’ existe dentro do intervalo de 0 a 5 da string.
+
+str = 'Aprenda programação em Python'
+
+print(str.find('python'))
+# -1
+
+print(str.find('Python'))
+# 23
+
+print(str.find('program', 8))
+# 8
+
+print(str.find('Python', 0, 5))
+# -1

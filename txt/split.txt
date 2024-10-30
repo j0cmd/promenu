@@ -1,0 +1,21 @@
+split
+
+Este método é usado para dividir qualquer dado de string com base em um separador ou delimitador específico. Ele pode receber dois argumentos, ambos são opcionais.
+
+Sintaxe:
+
+<string>.split()
+
+<string>.split(separador)
+
+<string>.split(separador, maxsplit=maxsplit)
+
+Se este método for usado sem nenhum argumento, o espaço será usado como separador por padrão. Qualquer caractere ou uma lista de caracteres pode ser usado como separador. O segundo argumento opcional é usado para definir o limite de vezes que a string será dividida. Ele retorna uma lista de strings.
+
+Exemplo:
+
+s1 = 'string methods in python programming language'.split()
+# ['string', 'methods', 'in', 'python']
+
+s2 = 'string methods in python programming language'.split(' ', maxsplit=1)
+# ['string', 'methods in python']

@@ -1,0 +1,8 @@
+'\n'Retorna uma nova string com todos os caracteres maiúsculos.
+sintaxe:
+<string>.upper()
+exemplo:
+texto = "texto para deixar em caixa alta"
+
+print(texto.upper())
+# TEXTO PARA DEIXAR EM CAIXA ALTA

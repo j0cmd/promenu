@@ -1,0 +1,14 @@
+rjust
+
+Retorna a string justificada à direita em uma string de comprimento especificado. O preenchimento é feito usando o caractere especificado (o padrão é um espaço).
+
+Sintaxe:
+
+<string>.rjust(width [, char])
+
+Exemplo:
+
+s = 'Python é incrível!'
+s = s.rjust(30, '-')
+# ------------Python é incrível!
+
