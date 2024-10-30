@@ -66,6 +66,7 @@ while opcao != 0:
             case _:
                 # itens = [iten for iten in n_menu]
                 if opcao >= len(menu):
+                    print(len(menu))
                     print('*** digite um numero valido da lista ***')
 
     except:
