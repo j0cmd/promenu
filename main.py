@@ -7,6 +7,7 @@ import separador
 import dados
 import mdls.metodos
 import mdls.metodos_listas
+import matchCase
 
 opcao = -1
 
@@ -22,7 +23,8 @@ def m_n_menu():
         (print('(6) visao geral das sequencias')),
         (print('(7) analize de dados')),
         (print('(8) metodos de string')),
-        (print('(9) metodos de listas'))
+        (print('(9) metodos de listas')),
+        (print('(10) match case'))
     )
     return n_menu
 
@@ -63,8 +65,10 @@ while opcao != 0:
             case 9:
                 print(mdls.metodos_listas.metodos_list())
                 m_n_menu()
+            case 10:
+                print(matchCase.main())
+                m_n_menu()
             case _:
-                # itens = [iten for iten in n_menu]
                 if opcao >= len(menu):
                     print(len(menu))
                     print('*** digite um numero valido da lista ***')

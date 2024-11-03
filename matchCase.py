@@ -18,21 +18,21 @@ def verificar_dia(dia):
             print('dia nao computado')
 
 
-msn = verificar_dia('terça')
-print(msn)
 
 
 """ trabalhando com tipos de dados """
+def tipos():
+    variavel = ['jomaia', 'trinta', (29, 3)]
 
-variavel = 123
-
-match variavel:
-    case int():
-        print("A variável é um inteiro")
-    case str():
-        print("A variável é uma string")
-    case _:
-        print("Tipo de dado não identificado")
+    match variavel:
+        case int():
+            print("A variável é um inteiro")
+        case str():
+            print("A variável é uma string")
+        case [str(name), *anos, (int(a), int(b))] if a > 20:
+            print(f'o {name} tem {anos} anos e faz aniversario dia {a, b}')
+        case _:
+            print("Tipo de dado não identificado")
 
 
 """Usando Padrões Estruturais"""
@@ -46,8 +46,6 @@ def estruturais():
     return ''
 
 
-msn2 = estruturais() 
-print(msn2)
 
 
 
@@ -68,5 +66,10 @@ def main():
             case [name, _, _, (lat, lon)] if lon <= 0:  # (2)
                 print(f'{name:15} | {lat:9.4f} | {lon:9.4f}')
 
+    msn = verificar_dia('terça')
+    print(msn)
 
-print(main())
+    msn2 = estruturais() 
+    print(msn2)
+
+    tipos()
