@@ -8,6 +8,7 @@ import dados
 import mdls.metodos
 import mdls.metodos_listas
 import matchCase
+import dicionariosEconjuntos
 
 opcao = -1
 
@@ -24,7 +25,8 @@ def m_n_menu():
         (print('(7) analize de dados')),
         (print('(8) metodos de string')),
         (print('(9) metodos de listas')),
-        (print('(10) match case'))
+        (print('(10) match case')),
+        (print('(11) dicionarios'))
     )
     return n_menu
 
@@ -67,6 +69,9 @@ while opcao != 0:
                 m_n_menu()
             case 10:
                 print(matchCase.main())
+                m_n_menu()
+            case 11:
+                print(dicionariosEconjuntos.main())
                 m_n_menu()
             case _:
                 if opcao >= len(menu):
