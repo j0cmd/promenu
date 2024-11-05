@@ -34,15 +34,41 @@ diversas funcionalidades onde posso escolher qual será executada sempre fazendo
 uso das estruturas dos dicionarios
 """
 
+dados = {'nome': 'joao', 'idade': 25}
 # acesso aos elementos do dicionario
 def acessando_elementos():
-    dados = {'nome': 'joao', 'idade': 25}
     print(dados['nome'])
 
 
+# adição e atualização de items
+def adicionando_elementos():
+    dados['profissao'] = 'programador'
+    dados['nome'] = 'josinaldo'
+    dados['idade'] = 45
+    print(dados)
+
+
+def metodos_dicionarios():
+    print(dados.keys())
+    print(dados.values())
+    print(dados.items())
+
+    # O for é muito usado para iterar pelas chaves e valores de um dicionário.
+    def iterando_items():
+        for k, v in dados.items():
+            print(f'chave {k} valor {v}')
+    iterando_items()
+
+
+def comprensao_dict():
+    quadrados = {x: x**2 for x in range(1, 6)}
+    print(quadrados)
+
+
+# função main que chama todas as outras no sistema
 def main():
     print('*** dicionario em funcionamento ***')
     acessando_elementos()
-
-
-main()
+    adicionando_elementos()
+    metodos_dicionarios()
+    comprensao_dict()
