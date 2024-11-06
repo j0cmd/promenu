@@ -24,5 +24,5 @@ acontecendo.
 Você pode pegar todo esse conteudo criado e passar para um projeto com interface grafica no futuro etc etc...
 <h3>Sugestão</h3>
 Boa parte do conteudo desse algorítimo foi estudado do livro de Luciano ramalho 
-<a>https://pythonfluente.com/#dicts-a-to-z</a>
+(https://pythonfluente.com/#dicts-a-to-z)
 
