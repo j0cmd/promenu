@@ -66,7 +66,8 @@ def comprensao_dict():
 
 
 def condicionais_dict():
-    pass
+    if dados['nome'] == 'josinaldo':
+        print(f'nome encontrado {dados.keys()}')
 
 
 # função main que chama todas as outras no sistema
@@ -76,3 +77,4 @@ def main():
     adicionando_elementos()
     metodos_dicionarios()
     comprensao_dict()
+    condicionais_dict()
