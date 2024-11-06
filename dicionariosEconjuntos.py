@@ -70,6 +70,10 @@ def condicionais_dict():
         print(f'nome encontrado {dados.keys()}')
 
 
+def lambda_dict():
+    pass
+
+
 # função main que chama todas as outras no sistema
 def main():
     print('*** dicionario em funcionamento ***')
