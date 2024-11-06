@@ -65,6 +65,10 @@ def comprensao_dict():
     print(quadrados)
 
 
+def condicionais_dict():
+    pass
+
+
 # função main que chama todas as outras no sistema
 def main():
     print('*** dicionario em funcionamento ***')
