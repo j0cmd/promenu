@@ -9,6 +9,7 @@ import mdls.metodos
 import mdls.metodos_listas
 import matchCase
 import dicionariosEconjuntos
+import funcoesEmbutidas.abs
 
 opcao = -1
 
@@ -26,7 +27,8 @@ def m_n_menu():
         (print('(8) metodos de string')),
         (print('(9) metodos de listas')),
         (print('(10) match case')),
-        (print('(11) dicionarios'))
+        (print('(11) dicionarios')),
+        (print('(12) funcoes embutidas'))
     )
     return n_menu
 
@@ -73,6 +75,8 @@ while opcao != 0:
             case 11:
                 print(dicionariosEconjuntos.main())
                 m_n_menu()
+            case 12:
+                print(funcoesEmbutidas.abs.main_functions())
             case _:
                 if opcao >= len(menu):
                     print(len(menu))
