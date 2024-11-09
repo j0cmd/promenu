@@ -54,6 +54,10 @@ imap { {}<left>
 imap ( ()<left>
 imap [ []<left>
 
+inoremap < <><left>
+inoremap ' ''<left>
+inoremap " ""<left>
+
 " salvamento automatico de arquivo
 " 1000 milisegundos = 1 segundo
 set updatetime=1000

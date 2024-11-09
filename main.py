@@ -84,5 +84,3 @@ while opcao != 0:
 
     except ValueError:
         print('digite um numero valido')
-       # if opcao != int:
-       #     print('*** OPCAO INVALIDA : ***')

@@ -1,4 +1,4 @@
 def se(titulo):
     s = titulo 
-    n = s.center(40, '*')
+    n = s.center(60, '*')
     print(n) 

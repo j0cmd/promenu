@@ -3,7 +3,10 @@
 Nesse modulo tem um estudo das funcionalidades dessa importante extrutura de
 dados. Aprenda a extrutura e desenvolva exemplos criativos para a execução
 """
+import separador
+
 def compressoes_dict():
+    separador.se('usando compressoes de dict')
     dial_codes = [
         (880, 'Bangladesh'),
         (55,  'Brazil'),
@@ -88,3 +91,4 @@ def main():
     metodos_dicionarios()
     comprensao_dict()
     condicionais_dict()
+    compressoes_dict()
