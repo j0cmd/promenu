@@ -11,6 +11,7 @@ O meu objetivo com esse projetinho não é encinar programação, mas dar ideia 
 seus pequenos codigos formados por funções, que acabou de aprender a criar, métodos que aprendeu para
 que serve como importar um módulo e junto com outros transformar em uma aplicação mais lógica  mais 
 objetiva mais pratica de se usar, de ver os resultados, de ver o seu codigo acontesendo.
+Esse algorítimo tem uma necessária repetição de código, essa repetição leva a prática a prática leva ao aprendizado
 
 <h3> Não é para você copiar </h3> 
 Mas sim ser uma inspiração para que abra sua mente já nos primeiros dias de aprendizado, A aplicação nao 
@@ -25,4 +26,3 @@ Você pode pegar todo esse conteudo criado e passar para um projeto com interfac
 <h3>Sugestão</h3>
 Boa parte do conteudo desse algorítimo foi estudado do livro de Luciano ramalho 
 (https://pythonfluente.com/)
-

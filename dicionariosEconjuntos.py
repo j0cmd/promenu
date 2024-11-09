@@ -35,6 +35,7 @@ uso das estruturas dos dicionarios
 """
 
 dados = {'nome': 'joao', 'idade': 25}
+
 # acesso aos elementos do dicionario
 def acessando_elementos():
     print(dados['nome'])
@@ -45,10 +46,16 @@ def adicionando_elementos():
     dados['profissao'] = 'programador'
     dados['nome'] = 'josinaldo'
     dados['idade'] = 45
-    print(dados)
+    print('depois dos dados adicionados ', dados)
 
 
 def metodos_dicionarios():
+    """
+    primeira parte printa individualmente a keys, values e items do dicionario
+
+    na segunda parte na funcao iterando_items um laço faz a iteração das chaves
+    e valores
+    """
     print(dados.keys())
     print(dados.values())
     print(dados.items())
@@ -76,7 +83,6 @@ def lambda_dict():
 
 # função main que chama todas as outras no sistema
 def main():
-    print('*** dicionario em funcionamento ***')
     acessando_elementos()
     adicionando_elementos()
     metodos_dicionarios()

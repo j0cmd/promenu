@@ -1,0 +1,13 @@
+
+A funcao abs(x) retorna sempre o valor absoluto do numero x
+Ela é útil para garantir que você está sempre lidando com valores positivos, especialmente em cálculos onde sinais negativos podem não fazer sentido (como distâncias, por exemplo).
+
+# Número positivo
+print(abs(5))   # Saída: 5
+
+# Número negativo
+print(abs(-5))  # Saída: 5
+
+# Número decimal
+print(abs(-3.6))  # Saída: 3.6
+

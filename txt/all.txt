@@ -1,0 +1,27 @@
+A função all() em Python verifica se todos os elementos de um iterável (como uma lista, tupla ou conjunto) são verdadeiros. Ela retorna True se todos os elementos forem verdadeiros ou se o iterável estiver vazio, e False caso contrário.
+
+Aqui estão alguns exemplos:
+
+# Lista com todos os valores verdadeiros
+valores = [True, True, True]
+print(all(valores))  # Saída: True
+
+# Lista com um valor falso
+valores = [True, False, True]
+print(all(valores))  # Saída: False
+
+# Lista de números, onde 0 é considerado falso
+numeros = [1, 2, 3, 0]
+print(all(numeros))  # Saída: False
+
+# Lista vazia - `all()` retorna True para iteráveis vazios
+vazia = []
+print(all(vazia))  # Saída: True
+
+Essa função é útil quando você quer verificar se uma condição é verdadeira para todos os itens de uma lista ou sequência. Por exemplo, você pode usá-la para confirmar se todos os números de uma lista são maiores que zero:
+
+numeros = [1, 2, 3, 4]
+todos_positivos = all(n > 0 for n in numeros)
+print(todos_positivos)  # Saída: True
+
+Neste exemplo, all(n > 0 for n in numeros) verifica se todos os números na lista são positivos.

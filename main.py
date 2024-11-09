@@ -9,7 +9,7 @@ import mdls.metodos
 import mdls.metodos_listas
 import matchCase
 import dicionariosEconjuntos
-import funcoesEmbutidas.abs
+import mdls.funcoesEmbutidas
 
 opcao = -1
 
@@ -76,12 +76,13 @@ while opcao != 0:
                 print(dicionariosEconjuntos.main())
                 m_n_menu()
             case 12:
-                print(funcoesEmbutidas.abs.main_functions())
+                print(mdls.funcoesEmbutidas.main_functions())
+                m_n_menu()
             case _:
                 if opcao >= len(menu):
-                    print(len(menu))
-                    print('*** digite um numero valido da lista ***')
+                    print(f'*** digite um numero valido da lista entre 1 e {len(menu) - 1} ***')
 
-    except:
-        if opcao != int:
-            print('*** OPCAO INVALIDA : ***')
+    except ValueError:
+        print('digite um numero valido')
+       # if opcao != int:
+       #     print('*** OPCAO INVALIDA : ***')
