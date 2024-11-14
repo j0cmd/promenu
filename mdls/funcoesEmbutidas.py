@@ -5,10 +5,10 @@ import os
 import separador
 
 def menu():
-    menu = [ 
+    menu = [
         (print('all')),
-        (print('abs'))
-    ]
+        (print('abs')),
+        ]
     return menu
 
 
@@ -32,9 +32,40 @@ def mfabs():
     return conteudo
 
 
-
 def mfAll():
     caminho = os.path.abspath('txt/all.txt')
     with open(caminho, 'r') as texto:
         conteudo = texto.read()
     return conteudo
+
+
+def mfany():
+    pass
+
+
+def mfascii():
+    pass
+
+
+def mfbim():
+    pass
+
+
+def mfbool():
+    pass
+
+
+def mfbytearray():
+    pass
+
+
+def mfbytes():
+    pass
+
+
+def mfcallable():
+    pass
+
+
+def mfchr():
+    pass

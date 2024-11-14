@@ -5,11 +5,10 @@ import hino
 import visao_das_sequencias
 import separador
 import dados
-import mdls.metodos
 import mdls.metodos_listas
 import matchCase
 import dicionariosEconjuntos
-import mdls.funcoesEmbutidas
+from mdls import funcoesEmbutidas, metodos
 
 opcao = -1
 
@@ -64,7 +63,7 @@ while opcao != 0:
                 print(dados.analizandoDados())
                 m_n_menu()
             case 8:
-                print(mdls.metodos.mainMetodos())
+                print(metodos.mainMetodos())
                 m_n_menu()
             case 9:
                 print(mdls.metodos_listas.metodos_list())
@@ -76,11 +75,13 @@ while opcao != 0:
                 print(dicionariosEconjuntos.main())
                 m_n_menu()
             case 12:
-                print(mdls.funcoesEmbutidas.main_functions())
+                print(funcoesEmbutidas.main_functions())
                 m_n_menu()
             case _:
                 if opcao >= len(menu):
                     print(f'*** digite um numero valido da lista entre 1 e {len(menu) - 1} ***')
+                elif opcao <= -1:
+                    print('numero negativo .')
 
     except ValueError:
         print('digite um numero valido')

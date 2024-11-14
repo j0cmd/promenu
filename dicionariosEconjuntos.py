@@ -36,6 +36,22 @@ grande variedade de aplicações. O objetivo aqui é montar uma aplicação com
 diversas funcionalidades onde posso escolher qual será executada sempre fazendo
 uso das estruturas dos dicionarios
 """
+def rhFuncionarios():
+    name = input('nome ')
+    idade = input('idade ')
+    profissao = input('profissao ')
+    salario = input('salario ')
+
+    cadastrando = [
+        ('nome', name),
+        ('idade', idade),
+        ('profissao', profissao),
+        ('salario', salario)
+    ]
+    cadastro = {valor: code for valor, code in cadastrando}
+    # cadastro.update({'nome': name, 'idade': idade, 'profissao': profissao, 'salario': salario})
+    print(cadastro)
+
 
 dados = {'nome': 'joao', 'idade': 25}
 
@@ -92,3 +108,9 @@ def main():
     comprensao_dict()
     condicionais_dict()
     compressoes_dict()
+    escolha = input('escolha ')
+    match escolha:
+        case 'dictcomp':
+            rhFuncionarios()
+        case _:
+            print('nao entendi...')
