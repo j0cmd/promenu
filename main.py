@@ -16,7 +16,7 @@ opcao = -1
 def m_n_menu():
     n_menu = (
         (print('//////// menu ////////')),
-        (print('(1) essa é a primeira opão')),
+        (print('(1) sorteio de um capitulo do livro para estudo')),
         (print('(2) Uma coleção de sequencias')),
         (print('(3) Você pode sortear uma opção para estudar.')),
         (print('(4) lindo hino do mais querido')),
