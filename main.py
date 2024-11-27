@@ -42,7 +42,7 @@ while opcao != 0:
         separador.se('codigo')
         match opcao:
             case 1:
-                print(opcao1.opcao1())
+                print(sorteio.sorte())
                 m_n_menu()
             case 2:
                 print(cap2.main())
