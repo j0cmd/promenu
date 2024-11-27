@@ -18,7 +18,7 @@ def m_n_menu():
         (print('//////// menu ////////')),
         (print('(1) sorteio de um capitulo do livro para estudo')),
         (print('(2) Uma coleção de sequencias')),
-        (print('(3) Você pode sortear uma opção para estudar.')),
+        (print('(3) dicinario e conjuntos.')),
         (print('(4) lindo hino do mais querido')),
         (print('(5) executa exercicio de dicionarios')),
         (print('(6) visao geral das sequencias')),
@@ -48,7 +48,7 @@ while opcao != 0:
                 print(cap2.main())
                 m_n_menu()
             case 3:
-                print(sorteio.sorte())
+                print(dicionariosEconjuntos.main())
                 m_n_menu()
             case 4:
                 print(hino.hinofla())
