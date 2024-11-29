@@ -19,6 +19,7 @@ def compeesoesList():
 # acima todo o conteudo estudado
 def menu():
     m = [
+        (print('\n')),
         (print('visao geral')),
         (print('compressao')),
         (print('sequenci...')),
@@ -27,15 +28,13 @@ def menu():
 
 
 def mainCap2():
-    visaoGeral = visao_geral()
-    compressao = compeesoesList()
-    # menu de organização
     menu()
+    # menu de organização
     msg = input('opçoes ')
     match msg:
         case 'visao geral':
-            print(visaoGeral)
-        case 'comprssao':
-            print(compressao)
+            print(visao_geral())
+        case 'compressao':
+            print(compeesoesList())
         case _:
             print('fim')
