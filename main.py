@@ -31,9 +31,6 @@ def m_n_menu():
     return n_menu
 
 
-
-
-
 menu = m_n_menu()
 
 
@@ -47,7 +44,7 @@ while opcao != 0:
                 print(sorteio.sorte())
                 m_n_menu()
             case 2:
-                print(cap2.main())
+                print(cap2.mainCap2())
                 m_n_menu()
             case 3:
                 print(dicionariosEconjuntos.main())
