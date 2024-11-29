@@ -1,4 +1,3 @@
-import opcao1
 import cap2
 import sorteio
 import hino
@@ -30,6 +29,9 @@ def m_n_menu():
         (print('(12) funcoes embutidas'))
     )
     return n_menu
+
+
+
 
 
 menu = m_n_menu()

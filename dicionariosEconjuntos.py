@@ -75,10 +75,12 @@ def metodos_dicionarios():
     na segunda parte na funcao iterando_items um laço faz a iteração das chaves
     e valores
     """
+    print('mostra os valores dos dados atraves dos metodos de dicionario\n')
     print(dados.keys())
     print(dados.values())
     print(dados.items())
 
+    print('laço fazendo a iteração no dicionario\n')
     # O for é muito usado para iterar pelas chaves e valores de um dicionário.
     def iterando_items():
         for k, v in dados.items():
@@ -99,18 +101,29 @@ def condicionais_dict():
 def lambda_dict():
     pass
 
+def menu():
+    m = [
+        (print('dictcomp = mostra exemplos de compressoes de dicionarios')),
+        (print('metodos = mostra os metodos usados em dicionarios')),
+        (print('outros ...'))
+    ]
+    return m
 
 # função main que chama todas as outras no sistema
 def main():
     acessando_elementos()
     adicionando_elementos()
-    metodos_dicionarios()
     comprensao_dict()
     condicionais_dict()
     compressoes_dict()
-    escolha = input('escolha ')
+    menu()
+    escolha = input('escolha uma opção acima ')
     match escolha:
         case 'dictcomp':
             rhFuncionarios()
+        case 'metodos':
+            metodos_dicionarios()
         case _:
             print('nao entendi...')
+
+
