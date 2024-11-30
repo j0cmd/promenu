@@ -37,10 +37,11 @@ diversas funcionalidades onde posso escolher qual será executada sempre fazendo
 uso das estruturas dos dicionarios
 """
 def rhFuncionarios():
-    name = input('nome ')
-    idade = input('idade ')
-    profissao = input('profissao ')
-    salario = input('salario ')
+    print('ok, vamos criar um dicionario com alguns dados?')
+    name = input('me diga seu nome... ')
+    idade = input('sua idade... ')
+    profissao = input('sua profissao... ')
+    salario = input('seu salario... ')
 
     cadastrando = [
         ('nome', name),
@@ -103,6 +104,7 @@ def lambda_dict():
 
 def menu():
     m = [
+        (print('\n')),
         (print('dictcomp = mostra exemplos de compressoes de dicionarios')),
         (print('metodos = mostra os metodos usados em dicionarios')),
         (print('outros ...'))
