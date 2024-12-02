@@ -33,22 +33,57 @@ def listcomCartesiano():
     diversolist = ['lua', True, 333, ['lista']]
 
     amboslist = [(nuber, leter) for nuber in nuberlist
-                                for leter in leterlist]
+                 for leter in leterlist]
     print(amboslist)
 
-    lista2 = [(leter, divers) for leter in leterlist
-              for divers in diversolist]
+    lista2 = [(leter, divers)for divers in diversolist for leter in leterlist
+              ]
     print(lista2)
 
 
-####### acima todo o conteudo estudado
+# avalia o uso de expressao geradora
+def genexps():
+    print('expressao geradora')
+    symbols = '$¢£¥€¤'
+    expgera = tuple(ord(symbol)for symbol in symbols)
+    print(expgera)
+    print(f'tipo de dado {type(expgera)}')
+
+    def genexpsComCartesiano():
+        print('\nexpressao geradora com um produto cartesiano')
+        colors = ['black', 'white']
+        size = ['p', 'm', 'g']
+        for tshort in (f'{c} {s}' for c in colors for s in size):
+            print(tshort)
+    genexpsComCartesiano()
+
+
+# avalia o uso de tuplas
+def tuplas():
+    caminho = os.path.abspath('txt/tuplas.txt')
+    with open(caminho, 'r') as texto:
+        conteudo = texto.read()
+    print(conteudo)
+
+    print('tuplas usadas como registro')
+    cidade, ano, populacao, area = ('tokyo', 2003, 32.450, 8014)
+    print(cidade, ano, populacao, area)
+
+
+def tuplasListImutaveis():
+    
+
+
+#    ####### acima todo o conteudo estudado#######
 def menu():
     m = [
         (print('\n')),
         (print('2.2   visao geral| uma abordagem rapida sobre os temas')),
         (print('2.3.1 compressao | compressao de lista')),
         (print('2.3.2 compVsFM   | compreessao vs filter e map')),
-        (print('2.3.3 cartesiano'))
+        (print('2.3.3 cartesiano | produtos cartesianos')),
+        (print('2.3.4 genexps    | expressao geradora')),
+        (print('tuplas'))
     ]
     return m
 
@@ -66,5 +101,9 @@ def mainCap2():
             print(listcompVsMapFilter())
         case 'cartesiano':
             print(listcomCartesiano())
+        case 'genexps':
+            print(genexps())
+        case 'tuplas':
+            print(tuplas())
         case _:
             print('fim')

@@ -12,7 +12,12 @@ from mdls import funcoesEmbutidas, metodos
 opcao = -1
 
 '''---MENU--- '''
+
+
 def m_n_menu():
+    """
+    docstring
+    """
     n_menu = (
         (print('//////// menu ////////')),
         (print('(1) sorteio de um capitulo do livro para estudo')),
@@ -78,7 +83,8 @@ while opcao != 0:
                 m_n_menu()
             case _:
                 if opcao >= len(menu):
-                    print(f'*** digite um numero valido da lista entre 1 e {len(menu) - 1} ***')
+                    print(f'*** digite um numero valido da\
+                          lista entre 1 e {len(menu) - 1} ***')
                 elif opcao <= -1:
                     print('numero negativo .')
 

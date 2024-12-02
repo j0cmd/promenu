@@ -1,0 +1,30 @@
+2.4. Tuplas não são apenas listas imutáveis
+
+Alguns textos introdutórios de Python apresentam as tuplas como "listas imutáveis", mas isso é subestimá-las.
+Tuplas tem duas funções: elas podem ser usada como listas imutáveis e também como registros sem nomes de campos.
+Esse uso algumas vezes é negligenciado, então vamos começar por ele.
+
+2.4.1. Tuplas como registros
+
+Tuplas podem conter registros: cada item na tupla contém os dados de um campo, e a posição do item indica seu significado.
+Se você pensar em uma tupla apenas como uma lista imutável, a quantidade e a ordem dos elementos pode ou não ter alguma 
+importância, dependendo do contexto. Mas quando usamos uma tupla como uma coleção de campos, o número de itens em geral
+é fixo e sua ordem é sempre importante.
+
+O Exemplo 7 mostras tuplas usadas como registros. Observe que, em todas as expressões, ordenar a tupla destruiria 
+a informação, pois o significado de cada campo é dado por sua posição na tupla.
+
+Em geral, usar _ como variável descartável (dummy variable) é só uma convenção. É apenas um nome de variável estranho mas válido.
+Entretanto, em uma instrução match/case, o _ é um coringa que corresponde a qualquer valor, mas não está vinculado a um valor.
+Veja a Seção 2.6. E no console do Python, o resultado do comando anterior é atribuído a _—a menos que o resultado seja None.
+
+
+
+Muitas vezes pensamos em registros como estruturas de dados com campos nomeados. O Capítulo 5 apresenta duas formas de criar tuplas com campos nomeados.
+
+Mas muitas vezes não é preciso se dar ao trabalho de criar uma classe apenas para nomear os campos, especialmente
+se você aproveitar o desempacotamento e evitar o uso de índices para acessar os campos. No Exemplo 7, 
+atribuímos ('Tokyo', 2003, 32_450, 0.66, 8014) a city, year, pop, chg, area em um único comando. E daí o 
+operador % atribuiu cada item da tupla passport para a posição correspondente da string de formato no 
+argumento print. Esses foram dois exemplos de desempacotamento de tuplas.
+
