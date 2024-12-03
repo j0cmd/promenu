@@ -70,9 +70,57 @@ def tuplas():
     print(cidade, ano, populacao, area)
 
 
-def tuplasListImutaveis():
-    
+    def tuplasListImutaveis():
+        print('definind uma funcao hash setando fix value')
 
+        # usando a funcao hash para definir um obj como imutavel
+        def fixed(o):
+            try:
+                hash(o)
+            except TypeError:
+                return False
+            return True
+        tf = (10, 'alpha', (1, 2))
+        tm = (10, 'alpha', [1, 2])
+        print(f'esse valor usa uma tupla aninhada a tupla {fixed(tf)}')
+        print(f'esse valor usa uma lista aninhada a tupla {fixed(tm)}')
+        print('exemplos de metodos em tupla\n')
+        print('indice encontrado na posição ', tf.index('alpha'))
+        print(tf.__len__())
+    tuplasListImutaveis()
+
+
+# 2.5 desempacotando sequencias e iteráveis
+def unpacking():
+    caminho = os.path.abspath('txt/unpacking.txt')
+    with open(caminho, 'r') as texto:
+        conteudo = texto.read()
+    print(conteudo)
+
+    # alguns exemplos de desempacotamento
+    lax_coordinates = (33.9425, -118.408056)
+    latitude, longitude = lax_coordinates
+    print(f'as coordenadas == {latitude} {longitude}')
+
+    # usando * para recolher itens em excesso
+    def usando_asterisco():
+        """
+        *args: Definir parâmetros de função com *args para capturar argumentos 
+        arbitrários em excesso é um recurso clássico do Python.
+        """
+        a, b, c, *args = range(1, 10)
+        print('lista de 1 a 10 com lista de excesso', a, b, c, args)
+        print('mais um exemplo', a, b, args, c)
+
+    # desempacotando em chamada de função
+    def emChamada(a, b, c, d, *rest):
+        """
+            Em chamadas de função, podemos usar * múltiplas vezes:
+        """
+        return a, b, c, d, rest
+    ch = emChamada(11, 12, 13, 4, *range(1, 18))
+    print('em chamada de funcao', ch)
+    usando_asterisco()
 
 #    ####### acima todo o conteudo estudado#######
 def menu():
@@ -83,7 +131,8 @@ def menu():
         (print('2.3.2 compVsFM   | compreessao vs filter e map')),
         (print('2.3.3 cartesiano | produtos cartesianos')),
         (print('2.3.4 genexps    | expressao geradora')),
-        (print('tuplas'))
+        (print('2.4 tuplas       | tupla nao sao apenas listas imutaveis')),
+        (print('2.5 unpacking    | desempacotando sequencias e iteraveis'))
     ]
     return m
 
@@ -105,5 +154,7 @@ def mainCap2():
             print(genexps())
         case 'tuplas':
             print(tuplas())
+        case 'unpacking':
+            print(unpacking())
         case _:
             print('fim')

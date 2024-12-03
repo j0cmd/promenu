@@ -1,0 +1,5 @@
+O desempacotamento é importante porque evita o uso de índices para extrair elementos de sequências, 
+um processo desnecessário e vulnerável a erros. Além disso, o desempacotamento funciona tendo qualquer 
+objeto iterável como fonte de dados—incluindo iteradores, que não suportam a notação de índice ([]). 
+O único requisito é que o iterável produza exatamente um item por variável na ponta de recebimento, 
+a menos que você use um asterisco (*) para capturar os itens em excesso, como explicado na Seção 2.5.1.
