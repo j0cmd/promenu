@@ -112,7 +112,7 @@ def unpacking():
         print('lista de 1 a 10 com lista de excesso', a, b, c, args)
         print('mais um exemplo', a, b, args, c)
 
-    # desempacotando em chamada de função
+    # 2.5.2 desempacotando em chamada de função
     def emChamada(a, b, c, d, *rest):
         """
             Em chamadas de função, podemos usar * múltiplas vezes:
@@ -121,6 +121,35 @@ def unpacking():
     ch = emChamada(11, 12, 13, 4, *range(1, 18))
     print('em chamada de funcao', ch)
     usando_asterisco()
+
+    # 2.5.3 Desempacotamento aninhado
+    def umpckinkAninhado():
+        """
+        O alvo de um desempacotamento pode usar aninhamento, por exemplo
+        (a, b, (c, d). O Python fará a coisa certa se o valor tiver a mesma
+        estrutura aninhada. O Exemplo 8 mostra o desempacotamento aninhado
+        em ação.
+        """
+        metro_areas = [
+            ('Tokyo', 'JP', 36.933, (35.689722, 139.691667)),  # (1)
+            ('Delhi NCR', 'IN', 21.935, (28.613889, 77.208889)),
+            ('Mexico City', 'MX', 20.142, (19.433333, -99.133333)),
+            ('New York-Newark', 'US', 20.104, (40.808611, -74.020386)),
+            ('São Paulo', 'BR', 19.649, (-23.547778, -46.635833)),
+        ]
+        print(f'{"":13} {"latitude":>13} {"longitude":>13}')
+        for name, _, _, (latitude, longitude) in metro_areas:
+            if longitude > 0:
+                print(f'{name:15} | {latitude} | {longitude}')
+
+    umpckinkAninhado()
+
+# 2.6 pattern Matchin com sequencia
+def patternMatchin():
+    """ Agora vamos estudar pattern matching, que suporta maneiras
+        ainda mais poderosas para desempacotar sequências.
+    """
+    
 
 #    ####### acima todo o conteudo estudado#######
 def menu():
