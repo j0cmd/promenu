@@ -149,7 +149,18 @@ def patternMatchin():
     """ Agora vamos estudar pattern matching, que suporta maneiras
         ainda mais poderosas para desempacotar sequências.
     """
-    
+    # este exemplo trata de desestruturação de tupla usando match case
+    metro_areas = [
+        ('Tokyo', 'JP', 36.933, (35.689722, 139.691667)),  # (1)
+        ('Delhi NCR', 'IN', 21.935, (28.613889, 77.208889)),
+        ('Mexico City', 'MX', 20.142, (19.433333, -99.133333)),
+        ('New York-Newark', 'US', 20.104, (40.808611, -74.020386)),
+        ('São Paulo', 'BR', 19.649, (-23.547778, -46.635833)),
+    ]
+    for record in metro_areas:
+        match record:
+            case [name, _, _, (lat, lon)] if lon <= 0:
+                print(f'{name:15} {lat:9.4f} {lon:9.4f}')
 
 #    ####### acima todo o conteudo estudado#######
 def menu():
@@ -161,7 +172,8 @@ def menu():
         (print('2.3.3 cartesiano | produtos cartesianos')),
         (print('2.3.4 genexps    | expressao geradora')),
         (print('2.4 tuplas       | tupla nao sao apenas listas imutaveis')),
-        (print('2.5 unpacking    | desempacotando sequencias e iteraveis'))
+        (print('2.5 unpacking    | desempacotando sequencias e iteraveis')),
+        (print('2.6 pattern matchin | pattern matchin com sequencia'))
     ]
     return m
 
@@ -185,5 +197,7 @@ def mainCap2():
             print(tuplas())
         case 'unpacking':
             print(unpacking())
+        case 'pattern matchin':
+            print(patternMatchin())
         case _:
             print('fim')
