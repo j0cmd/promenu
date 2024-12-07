@@ -162,6 +162,44 @@ def patternMatchin():
             case [name, _, _, (lat, lon)] if lon <= 0:
                 print(f'{name:15} {lat:9.4f} {lon:9.4f}')
 
+    print('\n')
+
+    caminho = os.path.abspath('txt/desestruturando.txt')
+    with open(caminho, 'r') as texto:
+        conteudo = texto.read()
+    print(conteudo)    # definindo opcoes diferentes
+
+    def definindoOpcoes():
+        commando = input('escreva ...')
+        commando = commando.split()
+        activated = True
+
+        match commando:
+            case ['move', 'right' | 'left' as direction] if activated:
+                print('move right or left')
+                print(f'direção: {direction}')
+            case ['move', 'up' 'down' as direction]:
+                print('move up or down')
+                print(f'direcao : {direction}')
+            case ['move', 'diagonal'] | ['movediagonal']:
+                print('agora diagonal')
+            case ['move', _]:
+                print('outra direcao')
+            case _:
+                print('no entendi')
+    definindoOpcoes()
+
+# 2.7 fatiamento
+def fatiamento():
+    listafatiada = [10, 20, 30, 40, 50, 60]
+    print('listafatiada', listafatiada)
+    doisprimeiros = listafatiada[:2]
+    print(f'listafatiada[:2] {doisprimeiros}')
+    print(f'listafatiada[2:] {listafatiada[2:]}')
+    print(f'listafatiada[:3] {listafatiada[:3]}')
+    print(f'listafatiada[3:] {listafatiada[3:]}')
+
+
 #    ####### acima todo o conteudo estudado#######
 def menu():
     m = [
@@ -173,7 +211,8 @@ def menu():
         (print('2.3.4 genexps    | expressao geradora')),
         (print('2.4 tuplas       | tupla nao sao apenas listas imutaveis')),
         (print('2.5 unpacking    | desempacotando sequencias e iteraveis')),
-        (print('2.6 pattern matchin | pattern matchin com sequencia'))
+        (print('2.6 pattern matchin | pattern matchin com sequencia')),
+        (print('2.7 fatiamento   | fatiamento'))
     ]
     return m
 
@@ -199,5 +238,7 @@ def mainCap2():
             print(unpacking())
         case 'pattern matchin':
             print(patternMatchin())
+        case 'fatiamento':
+            print(fatiamento())
         case _:
             print('fim')
