@@ -1,0 +1,42 @@
+Olhando superficialmente, match/case se parece instrução switch/case da 
+linguagem C—mas isso é só uma pequena parte da sua funcionalidade.
+Uma melhoria fundamental do match sobre o switch é a desestruturação—uma forma 
+mais avançada de desempacotamento. Desestruturação é uma palavra nova no vocabulário 
+do Python, mas é usada com frequência na documentação de linguagens que suportam o 
+pattern matching—como Scala e Elixir.
+
+Como um primeiro exemplo de desestruturação, o Exemplo 10 mostra parte do Exemplo 8 reescrito com match/case.
+
+    O sujeito desse match é record—isto é, cada uma das tuplas em metro_areas.
+    Uma instrução case tem duas partes: um padrão e uma guarda opcional, com a palavra-chave if.
+Em geral, um padrão de sequência casa com o sujeito se estas três condições forem verdadeiras:
+    O sujeito é uma sequência, e
+    O sujeito e o padrão tem o mesmo número de itens, e
+    Cada item correspondente casa, incluindo os itens aninhados.
+Por exemplo, o padrão [name, _, _, (lat, lon)] no Exemplo 10 casa com uma sequência de quatro itens, 
+e o último item tem que ser uma sequência de dois itens.
+
+Padrões de sequência podem ser escritos como tuplas e listas, mas a sintaxe usada não faz diferença: 
+em um padrão de sequência, colchetes e parênteses tem o mesmo significado. Escrevi o padrão como uma lista 
+com uma tupla aninhada de dois itens para evitar a repetição de colchetes ou parênteses no Exemplo 10.
+
+Um padrão de sequência pode casar com instâncias da maioria das subclasses reais ou virtuais de 
+collections.abcSequence, com a exceção de str, bytes, e bytearray.
+
+Instâncias de str, bytes, e bytearray não são tratadas como sequências no contexto de um match/case. Um sujeito de match de um desses tipos é tratado como um valor "atômico"—assim como o inteiro 987 é tratado como um único valor, e não como uma sequência de dígitos. Tratar aqueles três tipos como sequências poderia causar bugs devido a casamentos não intencionais. Se você quer usar um objeto daqueles tipos como um sujeito sequência, converta-o na instrução match. Por exemplo, veja tuple(phone) no trecho abaixo, que poderia ser usado para separar números de telefone por regiões do mundo com base no prefixo DDI:
+
+
+
+Na biblioteca padrão, os seguintes tipos são compatíveis com padrões de sequência:
+
+list     memoryview    array.array
+tuple    range         collections.deque
+
+Ao contrário do desempacotamento, padrões não desestruturam iteráveis que não sejam sequências (tal como os iteradores).
+
+O símbolo _ é especial nos padrões: ele casa com qualquer item naquela posição, mas nunca é vinculado ao valor daquele item. O valor é descartado. Além disso, o _ é a única variável que pode aparecer mais de uma vez em um padrão.
+
+Você pode vincular qualquer parte de um padrão a uma variável usando a palavra-chave as:
+
+
+
