@@ -45,16 +45,20 @@ def entrada(lista):
     palavra = definindo_palavra()
 
     forma(palavra)
-    le = input('advinhe as letras ')
-    indices = [i for i, char in enumerate(palavra)]
-    if le in palavra:
-        for i in indices:
-            if palavra[i] == le:
-                lista.insert(i, le)
-        print('tem')
-    else:
-        print('errado')
-    print(lista)
+    le = ''
+    while le != 'fim':
+        le = input('advinhe as letras ou (fim) para terminar')
+        indices = [i for i, char in enumerate(palavra)]
+        if le in palavra:
+            for i in indices:
+                if palavra[i] == le:
+                    lista[i] = le
+                    #  lista.insert(i, le)
+            print('tem')
+        else:
+            
+            print('errado')
+        print(lista)
 
 
 def main_jogo():
