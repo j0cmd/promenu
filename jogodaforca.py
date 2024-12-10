@@ -4,8 +4,11 @@
 # uma letra
 # se tiver a letra digitada, a palavra a letra será adicionada caso 
 # contrario um erro será marcado
+
 import os
 import random
+import re
+
 
 def definindo_palavra():
     caminho = os.path.abspath('br_utf8.txt')
@@ -14,49 +17,38 @@ def definindo_palavra():
     with open(caminho, 'r') as arquivo:
         linhas = arquivo.readlines()
 
-    #  linhas = [linhas.strip() for linha in linhas if linha.strip()]
-
     # sorteio da palavra
     if linhas:
         linha_sorteada = random.choice(linhas)
-        print(f'{linha_sorteada}')
-    return linha_sorteada
+        print(f'{repr(linha_sorteada)}')
+        print(len(linha_sorteada))
+    return linha_sorteada.rstrip('\n')
 
 
 lista = []
 def forma(palavra):
+    print('eee', len(palavra))
     for letra in palavra:
         lista.append('__ ')
-    #  indices = [i for i, char in enumerate(palavra) if char == letra]
+    lista[0] = palavra[0]
     print(lista)
-    print(len(lista))
-
-    #  if le in palavra:
-        #  letra = palavra.enumerate(le)
-        #  lista.insert(letra, le)
-    #  print(indices)
-
-    #  for i in indices:
-        #  indices.insert('aa')
-    #  print(indices)
+    print(f'Palavra com {len(lista)} letras ')
 
 
 def entrada(lista):
     palavra = definindo_palavra()
-
     forma(palavra)
     le = ''
     while le != 'fim':
-        le = input('advinhe as letras ou (fim) para terminar')
+        le = input('advinhe as letras ou (fim) para terminar ')
+        le = le.lower()
         indices = [i for i, char in enumerate(palavra)]
         if le in palavra:
             for i in indices:
                 if palavra[i] == le:
                     lista[i] = le
-                    #  lista.insert(i, le)
             print('tem')
         else:
-            
             print('errado')
         print(lista)
 
