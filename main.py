@@ -1,12 +1,12 @@
-import cap2
 import sorteio
-import hino
+import cap2
+import dicionariosEconjuntos
+import cap4
 import visao_das_sequencias
 import separador
 import dados
 import mdls.metodos_listas
 import matchCase
-import dicionariosEconjuntos
 from mdls import funcoesEmbutidas, metodos
 import jogodaforca
 
@@ -24,7 +24,7 @@ def m_n_menu():
         (print('(1) sorteio de um capitulo do livro para estudo')),
         (print('(2) Uma coleção de sequencias')),
         (print('(3) dicinario e conjuntos.')),
-        (print('(4) lindo hino do mais querido')),
+        (print('(4) Texto em Unicode versus Bytes')),
         (print('(5) executa exercicio de dicionarios')),
         (print('(6) visao geral das sequencias')),
         (print('(7) analize de dados')),
@@ -57,7 +57,7 @@ while opcao != 0:
                 print(dicionariosEconjuntos.main())
                 m_n_menu()
             case 4:
-                print(hino.hinofla())
+                print(cap4.main_cap4())
                 m_n_menu()
             case 5:
                 print('opcao 5')

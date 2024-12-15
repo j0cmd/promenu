@@ -1,4 +1,5 @@
 import os
+import separador
 
 
 def visao_geral():
@@ -199,6 +200,14 @@ def fatiamento():
     print(f'listafatiada[:3] {listafatiada[:3]}')
     print(f'listafatiada[3:] {listafatiada[3:]}')
 
+    def objetofatia():
+        caminho = os.path.abspath('txt/objetofatia.txt')
+        with open(caminho, 'r') as texto:
+            conteudo = texto.read()
+        print(conteudo)
+
+    objetofatia()
+
 
 #    ####### acima todo o conteudo estudado#######
 def menu():
@@ -221,6 +230,7 @@ def mainCap2():
     menu()
     # menu de organização
     msg = input('\nescolha uma das opçoes ... ')
+    separador.se('codigo')
     match msg:
         case 'visao geral':
             print(visao_geral())

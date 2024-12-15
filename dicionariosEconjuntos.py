@@ -43,15 +43,18 @@ def rhFuncionarios():
     profissao = input('sua profissao... ')
     salario = input('seu salario... ')
 
-    cadastrando = [
+    cadastrando = (
         ('nome', name),
         ('idade', idade),
         ('profissao', profissao),
         ('salario', salario)
-    ]
+    )
     cadastro = {valor: code for valor, code in cadastrando}
     # cadastro.update({'nome': name, 'idade': idade, 'profissao': profissao, 'salario': salario})
     print(cadastro)
+
+    compressoes_dict()
+    condicionais_dict()
 
 
 dados = {'nome': 'joao', 'idade': 25}
@@ -102,6 +105,7 @@ def condicionais_dict():
 def lambda_dict():
     pass
 
+# acima fica o codigo
 def menu():
     m = [
         (print('\n')),
@@ -116,10 +120,8 @@ def main():
     acessando_elementos()
     adicionando_elementos()
     comprensao_dict()
-    condicionais_dict()
-    compressoes_dict()
     menu()
-    escolha = input('escolha uma opção acima ')
+    escolha = input('escolha uma opção acima ****** ')
     match escolha:
         case 'dictcomp':
             rhFuncionarios()
