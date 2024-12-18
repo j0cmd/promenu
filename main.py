@@ -1,18 +1,16 @@
 import sorteio
 import cap2
-import dicionariosEconjuntos
+import cap3
 import cap4
-import visao_das_sequencias
+import cap5
 import separador
-import dados
 import mdls.metodos_listas
-import matchCase
 from mdls import funcoesEmbutidas, metodos
-import jogodaforca
+import jogos.jogodaforca
 
 opcao = -1
 
-'''---MENU--- '''
+'''---MENU---  '''
 
 
 def m_n_menu():
@@ -25,7 +23,7 @@ def m_n_menu():
         (print('(2) Uma coleção de sequencias')),
         (print('(3) dicinario e conjuntos.')),
         (print('(4) Texto em Unicode versus Bytes')),
-        (print('(5) executa exercicio de dicionarios')),
+        (print('(5) Fábrica de classes de dados')),
         (print('(6) visao geral das sequencias')),
         (print('(7) analize de dados')),
         (print('(8) metodos de string')),
@@ -54,19 +52,19 @@ while opcao != 0:
                 print(cap2.mainCap2())
                 m_n_menu()
             case 3:
-                print(dicionariosEconjuntos.main())
+                print(cap3.main())
                 m_n_menu()
             case 4:
                 print(cap4.main_cap4())
                 m_n_menu()
             case 5:
-                print('opcao 5')
+                print(cap5.main_cap5())
                 m_n_menu()
             case 6:
-                print(visao_das_sequencias.visaoGeral())
+                print()
                 m_n_menu()
             case 7:
-                print(dados.analizandoDados())
+                print()
                 m_n_menu()
             case 8:
                 print(metodos.mainMetodos())
@@ -75,7 +73,7 @@ while opcao != 0:
                 print(mdls.metodos_listas.metodos_list())
                 m_n_menu()
             case 10:
-                print(matchCase.main())
+                print()
                 m_n_menu()
             case 11:
                 print(dicionariosEconjuntos.main())
@@ -84,7 +82,7 @@ while opcao != 0:
                 print(funcoesEmbutidas.main_functions())
                 m_n_menu()
             case 25:
-                print(jogodaforca.main_jogo())
+                print(jogos.jogodaforca.main_jogo())
                 m_n_menu()
             case _:
                 if opcao >= len(menu):

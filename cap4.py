@@ -16,3 +16,8 @@ Nesse capítulo, veremos os seguintes tópicos:
 
 def main_cap4():
     print('capitulo quatro')
+    s = 'jó araújo'
+    b = s.encode('utf8')
+    print(b)
+    print(len(b))
+    print('decodificando b ', b.decode('utf8'))

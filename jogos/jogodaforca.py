@@ -11,7 +11,7 @@ import re
 
 
 def definindo_palavra():
-    caminho = os.path.abspath('br_utf8.txt')
+    caminho = os.path.abspath('txt/br_utf8.txt')
 
     # abrindo o arquivo
     with open(caminho, 'r') as arquivo:
