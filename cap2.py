@@ -3,7 +3,7 @@ import separador
 
 
 def visao_geral():
-    caminho = os.path.abspath('txt/visaogeral.txt')
+    caminho = os.path.abspath('txt/visaogeral.md')
     with open(caminho, 'r') as texto:
         conteudo = texto.read()
     return conteudo

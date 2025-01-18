@@ -1,9 +1,5 @@
-import sorteio
-import cap2
-import cap3
-import cap4
-import cap5
-import separador
+import sorteio, separador
+import cap2, cap3, cap4, cap5, cap7
 import mdls.metodos_listas
 from mdls import funcoesEmbutidas, metodos
 import jogos.jogodaforca
@@ -25,13 +21,13 @@ def m_n_menu():
         (print('(4) Texto em Unicode versus Bytes')),
         (print('(5) Fábrica de classes de dados')),
         (print('(6) visao geral das sequencias')),
-        (print('(7) analize de dados')),
+        (print('(7) Parte ||: Funções como objetos')),
         (print('(8) metodos de string')),
         (print('(9) metodos de listas')),
         (print('(10) match case')),
         (print('(11) dicionarios')),
         (print('(12) funcoes embutidas')),
-        (print('(25) jogos'))
+        (print('(25) jogos')),
     )
     return n_menu
 
@@ -64,7 +60,7 @@ while opcao != 0:
                 print()
                 m_n_menu()
             case 7:
-                print()
+                print(cap7.main_cap7())
                 m_n_menu()
             case 8:
                 print(metodos.mainMetodos())
@@ -76,7 +72,7 @@ while opcao != 0:
                 print()
                 m_n_menu()
             case 11:
-                print(dicionariosEconjuntos.main())
+                print()
                 m_n_menu()
             case 12:
                 print(funcoesEmbutidas.main_functions())
