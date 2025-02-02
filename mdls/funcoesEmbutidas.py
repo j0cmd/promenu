@@ -8,6 +8,7 @@ def menu():
     menu = [
         (print('all')),
         (print('abs')),
+        (print('any')),
         ]
     return menu
 
@@ -24,6 +25,8 @@ def main_functions():
                 print(mfabs())
             case 'all':
                 print(mfAll())
+            case 'any':
+                print(mfany())
 
 def mfabs():
     caminho = os.path.abspath('txt/abs.txt')
@@ -40,7 +43,10 @@ def mfAll():
 
 
 def mfany():
-    pass
+    print('checa se algun iten da lista é verdadeiro')
+    mylista = ([False, False, False])
+    x = any(mylista)
+    return x
 
 
 def mfascii():

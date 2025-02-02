@@ -44,26 +44,34 @@ def cubo(x):
 
 
 def main_cap7():
-    #  Atribuir a função a uma variável
+    # 1 Atribuir a função a uma variável
     diga_oi = saudacao
     print(diga_oi('Maria'))
 
-    # Passar uma funcao como argumento
+    # 2 Passar uma funcao como argumento
     resultado = executar(dobrar, 5)
     print(resultado)
+    print('executar é da ', type(executar))
+    #  print(help(executar))
 
-    # Retornar uma funcao de outra funcao
+    # 3 Retornar uma funcao de outra funcao
     multiplicar_por_3 = criar_multiplicador(5)
     print(multiplicar_por_3(10))
 
-    # Armazenar funcões em uma estrutura de dados
+    # 4 Armazenar funcões em uma estrutura de dados
     resultado_somado = operacoes["soma"](5, 10)
     resultado_subtraido = operacoes['subtracao'](4, 8)
     print(resultado_somado)
     print(resultado_subtraido)
     print(type(operacoes))
 
-    # Usar funções em uma lista (ou iterar sobre elas)
+    # 5 Usar funções em uma lista (ou iterar sobre elas)
     funcoes = [quadrado, cubo]
     for funcao in funcoes:
         print(f'{funcao}', funcao(5))
+
+    """Explicação:
+    funções de primeira classe permite criar abstrações e implementações
+    mais dinâmicas, contribuindo para o desenvolvimento de código modular
+    e reutilizável.
+    """
