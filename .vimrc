@@ -106,4 +106,9 @@ map cc <Plug>NERDCommenterInvert
 let g:ale_linters = {'python': ['flake8', 'pylint'], 'javascript': ['eslint']}
 let g:ale_completion_enabled = 0
 
+Plug 'jackMort/ChatGPT.nvim'
+
+require('chatgpt').setup({
+  api_key_cmd = 'echo "sua-chave-openai"'
+})
 source ~/.vim/coc.nvimrc
