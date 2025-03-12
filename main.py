@@ -1,5 +1,5 @@
 import sorteio, separador
-import cap2, cap3, cap4, cap5, cap7
+import cap2, cap3, cap4, cap5, cap7, cap8, cap9
 import mdls.metodos_listas
 from mdls import funcoesEmbutidas, metodos
 import jogos.jogodaforca
@@ -22,12 +22,14 @@ def m_n_menu():
         (print('(5) Fábrica de classes de dados')),
         (print('(6) visao geral das sequencias')),
         (print('(7) Parte ||: Funções como objetos')),
-        (print('(8) metodos de string')),
-        (print('(9) metodos de listas')),
+        (print('(8) Dicas de tipo em funções')),
+        (print('(9) Decoradores e clausuras')),
         (print('(10) match case')),
         (print('(11) dicionarios')),
         (print('(12) funcoes embutidas')),
         (print('(25) jogos')),
+        (print('(26) metodos de string')),
+        (print('(27) metodos de listas')),
     )
     return n_menu
 
@@ -63,10 +65,10 @@ while opcao != 0:
                 print(cap7.main_cap7())
                 m_n_menu()
             case 8:
-                print(metodos.mainMetodos())
+                print(cap8.main_cap8())
                 m_n_menu()
             case 9:
-                print(mdls.metodos_listas.metodos_list())
+                print(cap9.main_cap9())
                 m_n_menu()
             case 10:
                 print()
@@ -79,6 +81,12 @@ while opcao != 0:
                 m_n_menu()
             case 25:
                 print(jogos.jogodaforca.main_jogo())
+                m_n_menu()
+            case 26:
+                print(metodos.mainMetodos())
+                m_n_menu()
+            case 27:
+                print(mdls.metodos_listas.metodos_list())
                 m_n_menu()
             case _:
                 if opcao >= len(menu):
